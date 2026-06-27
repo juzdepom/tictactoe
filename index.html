@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="setMode('ai')">Play vs Computer</button>
+            <button class="mode-btn" onclick="setMode('player')">2 Player</button>
+        </div>
+
+        <div class="game-info">
+            <div class="score">You: <span id="userScore">0</span></div>
+            <div class="score">Computer: <span id="computerScore">0</span></div>
+            <div class="score">Draws: <span id="drawScore">0</span></div>
+        </div>
+
+        <div class="status" id="status">Your turn (X)</div>
+
+        <div class="board" id="board">
+            <button class="cell" onclick="makeMove(0)"></button>
+            <button class="cell" onclick="makeMove(1)"></button>
+            <button class="cell" onclick="makeMove(2)"></button>
+            <button class="cell" onclick="makeMove(3)"></button>
+            <button class="cell" onclick="makeMove(4)"></button>
+            <button class="cell" onclick="makeMove(5)"></button>
+            <button class="cell" onclick="makeMove(6)"></button>
+            <button class="cell" onclick="makeMove(7)"></button>
+            <button class="cell" onclick="makeMove(8)"></button>
+        </div>
+
+        <div class="button-group">
+            <button onclick="resetGame()">New Game</button>
+            <button onclick="resetScores()">Reset Scores</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
